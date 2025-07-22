@@ -1,19 +1,12 @@
 pipeline{
   agent any
   stages{
-    stage('build'){
+    stage('server ip'){
       steps{
-        echo "this is build stage"
-      }
-    }
-    stage('Test'){
-      steps{
-        echo "this is test stage"
-      }
-    }
-    stage('Deploy'){
-      steps{
-        echo "this is deploy steage"
+          sh '''
+              hostname -i
+              echo "hostname is :$(hostname -i)"
+              '''
       }
     }
   }
