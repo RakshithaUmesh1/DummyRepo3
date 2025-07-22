@@ -1,7 +1,7 @@
 pipeline{
   agent {
         label 'node-1'
-    ]
+  }
   stages{
     stage('server ip'){
       steps{
